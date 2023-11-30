@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"]
+}

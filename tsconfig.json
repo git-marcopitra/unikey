@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "declaration": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+  },
+  "exclude": ["**/node_modules/**"]
+}
