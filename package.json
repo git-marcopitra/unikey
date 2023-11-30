@@ -1,6 +1,6 @@
 {
   "name": "unikey",
-  "version": "0.1.0",
+  "version": "0.1.1-beta",
   "description": "Unique key generator library",
   "src": "src/lib/index.ts",
   "main": "dist/index.js",
@@ -10,11 +10,16 @@
   "author": "git-marcopitra <marcomorete73@hotmail.com>",
   "private": false,
   "sideEffects": false,
+  "license": "MIT",
   "homepage":  "https://github.com/git-marcopitra",
   "scripts": {
     "test": "jest",
     "dev": "tsc -w",
-    "build": "tsc"
+    "build": "tsc",
+
+    "publish:alpha": "yarn build && npm publish --tag alpha",
+    "publish:beta": "yarn build && npm publish --tag beta",
+    "publish:latest": "yarn build && npm publish"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
