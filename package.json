@@ -1,8 +1,20 @@
 {
   "name": "unikey",
   "version": "0.1.0",
+  "description": "Unique key generator library",
+  "src": "src/lib/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "declarationTypes": "types/index.d.ts",
+  "repository": "https://github.com/git-marcopitra",
+  "author": "git-marcopitra <marcomorete73@hotmail.com>",
+  "private": false,
+  "sideEffects": false,
+  "homepage":  "https://github.com/git-marcopitra",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "tsc -w",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
@@ -16,5 +28,10 @@
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
-  }
+  },
+  "files": [
+    "package.json",
+    "README",
+    "dist"
+  ]
 }
