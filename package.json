@@ -1,6 +1,6 @@
 {
   "name": "unikey",
-  "version": "0.1.1-beta",
+  "version": "1.0.0",
   "description": "Unique key generator library",
   "src": "src/lib/index.ts",
   "main": "dist/index.js",
