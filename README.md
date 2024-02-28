@@ -27,9 +27,28 @@ pnpm add unikey
 ```js
 import unikey from 'unikey';
 
-const key = unikey(); // 2YsCOcON
+const key = unikey(); // enf5a8t9
 
-const key16 = unikey(16); // hFkcpCtU3AWILeQI
+// ...
+```
+
+### With length
+
+```js
+import unikey from 'unikey';
+
+const key = unikey(16); // tcmd6gud23ga2f5p
+
+// ...
+```
+
+### With Options
+
+```js
+import unikey from 'unikey';
+
+const mixedKey = unikey(16, { case: 'mixed' }); // riQTUuoZ3iV9RQEH
+const upperKey = unikey(16, { case: 'upper' }); // IAYNLQD8T3DJ63GR
 
 // ...
 ```
