@@ -10,7 +10,7 @@ const makeSut = () => ({
 /**
  * @description is a constant that contains the inputs and respective expected outputs
  */
-const LENGHT_IO = [
+const LENGTH_IO = [
   [undefined, 8],
   [2, 2],
   [4, 4],
@@ -24,7 +24,7 @@ const LENGHT_IO = [
 ];
 
 describe('Check if the length of result is equal than input param', () => {
-  it.each(LENGHT_IO)(
+  it.each(LENGTH_IO)(
     'should receive %s and return %d caracteres',
     (input, output) => {
       const { sut } = makeSut();
@@ -40,7 +40,7 @@ describe('Check if only return alphanumeric strings in 100 attempts', () => {
   it.each(Array.from({ length: 100 }, () => sut()))(
     'should receive %s and return only alphanumeric string',
     (key) => {
-      const regex = new RegExp(/^[a-z0-9]+$/i);
+      const regex = new RegExp(/^[a-zA-Z0-9]+$/i);
 
       expect(regex.test(key)).toBeTruthy();
     }
@@ -56,4 +56,17 @@ describe('Check if two generation will never be equals strings in 100 attempts',
       expect(input).not.toBe(output);
     }
   );
+});
+
+describe('Check if two generation will never be equals strings in 100 attempts with the mixedCase', () => {
+  const { sut } = makeSut();
+
+  it.each(
+    Array.from({ length: 100 }, () => [
+      sut(16, { mixedCase: true }),
+      sut(16, { mixedCase: true }),
+    ])
+  )('should %s be different from %s', (input, output) => {
+    expect(input).not.toBe(output);
+  });
 });
