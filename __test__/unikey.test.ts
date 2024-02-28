@@ -63,8 +63,21 @@ describe('Check if two generation will never be equals strings in 100 attempts w
 
   it.each(
     Array.from({ length: 100 }, () => [
-      sut(16, { mixedCase: true }),
-      sut(16, { mixedCase: true }),
+      sut(16, { case: 'mixed' }),
+      sut(16, { case: 'mixed' }),
+    ])
+  )('should %s be different from %s', (input, output) => {
+    expect(input).not.toBe(output);
+  });
+});
+
+describe('Check if two generation will never be equals strings in 100 attempts with the upperCase', () => {
+  const { sut } = makeSut();
+
+  it.each(
+    Array.from({ length: 100 }, () => [
+      sut(16, { case: 'upper' }),
+      sut(16, { case: 'upper' }),
     ])
   )('should %s be different from %s', (input, output) => {
     expect(input).not.toBe(output);
