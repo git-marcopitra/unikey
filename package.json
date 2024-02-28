@@ -16,7 +16,6 @@
     "test": "jest",
     "dev": "tsc -w",
     "build": "tsc",
-
     "publish:alpha": "yarn build && npm publish --tag alpha",
     "publish:beta": "yarn build && npm publish --tag beta",
     "publish:latest": "yarn build && npm publish"
